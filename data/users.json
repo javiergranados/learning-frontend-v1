@@ -1,0 +1,25 @@
+{
+    "users" : [
+        {
+            "name" : "Rodolfo",
+            "lastname1" : "Langostino",
+            "lastname2" : "Rodriguez",
+            "age" : "20",
+            "city" : "Alicante"
+        },
+        {
+            "name" : "Maria",
+            "lastname1" : "Dolores",
+            "lastname2" : "De barriga",
+            "age" : "33",
+            "city" : "Madrid"
+        },
+        {
+            "name": "Batman",
+            "lastname1": "Bin",
+            "lastname2": "Suparman",
+            "age": "27",
+            "city": "Singapore"
+        }
+    ]
+}

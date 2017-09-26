@@ -1,0 +1,55 @@
+<section ng-controller="mainController" ng-init="init()">
+        <div class="row">
+            <div class="col-md-10" style="text-align:center;">
+                <h3>
+                    Lista de usuarios
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <button class="md-button md-raised md-primary" ng-click="showUsers()">
+                    Mostrar lista
+                </button>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-10">
+                <div class="row col-md-12">
+                    <div class="col-md-12">
+                        <input
+                            type="text"
+                            class="form-control"
+                            ng-model="filterList"
+                            placeholder="Buscar..."
+                        >
+                    </div>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido 1</th>
+                            <th>Apellido 2</th>
+                            <th>Edad</th>
+                            <th>Ciudad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in users | filter:filterList as resultFilter" ng-click="open($event, user)" style="cursor: pointer">
+                            <td>{{user.name}}</td>
+                            <td>{{user.lastname1}}</td>
+                            <td>{{user.lastname2}}</td>
+                            <td>{{user.age}}</td>
+                            <td>{{user.city}}</td>
+                        </tr>
+                        <tr ng-show="resultFilter.length === 0">
+                            <td colspan="15" style="text-align:center;">
+                                <h2>No hay resultados</h2>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</section>
