@@ -6,6 +6,7 @@
   "author": "regam",
   "license": "ISC",
   "scripts": {
+    "start": "http-server -p 8088",
     "build": "browserify src/application.js > dist/app.js"
   },
   "dependencies": {
@@ -15,5 +16,8 @@
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.6",
     "browserify": "^14.4.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
   }
 }
